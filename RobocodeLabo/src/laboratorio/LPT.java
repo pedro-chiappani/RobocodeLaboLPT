@@ -5,7 +5,7 @@ import robocode.JuniorRobot;
 public class LPT extends JuniorRobot {
 
     boolean robotOnSight = false;
-//    Estrategia estragia = new Agresivo();
+//    Estrategia estragia = new Agresivo(); Ejemplo de estrategia
 
     @Override
     public void run() {
@@ -14,7 +14,7 @@ public class LPT extends JuniorRobot {
         } else {
             robotOnSight = false;
         }
-//        estrategia.run();
+//        estrategia.run(); Como correrla
     }
 
     @Override
