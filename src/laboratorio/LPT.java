@@ -4,30 +4,28 @@ import robocode.JuniorRobot;
 
 public class LPT extends JuniorRobot {
 
-    boolean robotOnSight = false;
-//    Estrategia estragia = new Agresivo(); Ejemplo de estrategia
+    private Strategy estrategia = new Ganadora();
 
     @Override
     public void run() {
-        if (!robotOnSight) {
-            turnGunLeft(5);
-        } else {
-            robotOnSight = false;
-        }
-//        estrategia.run(); Como correrla
+        this.estrategia.run(this);
     }
 
     @Override
     public void onScannedRobot(){
-        robotOnSight = true;
-        fire(2);
-        ahead(5);
+        this.estrategia.onScannedRobot(this);
     }
 
     @Override
     public void onHitWall(){
-        back(10);
-        turnLeft(45);
+        this.estrategia.onHitWall(this);
+    }
+
+    public Strategy getEstrategia() {
+        return this.estrategia;
+    }
+    public void setEstrategia(Strategy estrategia) {
+        this.estrategia = estrategia;
     }
 
 }
