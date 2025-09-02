@@ -9,4 +9,6 @@ public interface Strategy {
     void onHitWall(LPT juniorRobot);
 
     void onScannedRobot(LPT juniorRobot);
+
+    void onHitByBullet(LPT juniorRobot);
 }

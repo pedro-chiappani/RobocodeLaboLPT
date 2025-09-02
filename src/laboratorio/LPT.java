@@ -21,6 +21,9 @@ public class LPT extends JuniorRobot {
         this.estrategia.onHitWall(this);
     }
 
+    @Override
+    public void onHitByBullet(){ this.estrategia.onHitWall(this); }
+
     public Strategy getEstrategia() {
         return this.estrategia;
     }
