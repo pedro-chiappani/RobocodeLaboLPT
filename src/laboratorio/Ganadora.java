@@ -32,13 +32,13 @@ public class Ganadora implements Strategy{
     @Override
     public void onHitWall(LPT juniorRobot) {
         juniorRobot.back(10);
-        juniorRobot.turnLeft(45);
+        juniorRobot.turnLeft(90);
     }
 
     @Override
     public void onHitByBullet (LPT juniorRobot) {
-        juniorRobot.turnRight(180);
-        juniorRobot.ahead(10000);
+        juniorRobot.turnRight(90);
+        juniorRobot.ahead(100);
         this.setPowerFires(3);
     }
 
