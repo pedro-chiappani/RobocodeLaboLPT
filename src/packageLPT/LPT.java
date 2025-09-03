@@ -4,7 +4,7 @@ import robocode.JuniorRobot;
 
 public class LPT extends JuniorRobot {
 
-    private Strategy estrategia = new Ganadora();
+    private Strategy estrategia = new Estratega1();
 
     @Override
     public void run() {
@@ -29,6 +29,7 @@ public class LPT extends JuniorRobot {
     }
     public void setEstrategia(Strategy estrategia) {
         this.estrategia = estrategia;
+//        this.estrategia = estratega.estrategia();
     }
 
 }
