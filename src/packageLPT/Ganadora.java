@@ -1,6 +1,4 @@
-package laboratorio;
-
-import robocode.JuniorRobot;
+package packageLPT;
 
 import java.awt.*;
 

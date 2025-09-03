@@ -1,4 +1,4 @@
-package laboratorio;
+package packageLPT;
 import robocode.*;
 
 
