@@ -4,7 +4,8 @@ import robocode.JuniorRobot;
 
 public class LPT extends JuniorRobot {
 
-    private Strategist estratega = Defensivo.getInstancia();
+    private Strategist estratega = Estratega2.getInstancia();
+    //private Strategist estratega = Defensivo.getInstancia();
 
     @Override
     public void run() {
