@@ -4,32 +4,25 @@ import robocode.JuniorRobot;
 
 public class LPT extends JuniorRobot {
 
-    private Strategy estrategia = new Ganadora();
+    private Strategist estratega = Defensivo.getInstancia();
 
     @Override
     public void run() {
-        this.estrategia.run(this);
+        this.estratega.returnStrategyRun(this).run(this);
     }
 
     @Override
     public void onScannedRobot(){
-        this.estrategia.onScannedRobot(this);
+        this.estratega.returnStrategyOnScannedRobot(this).onScannedRobot(this);
     }
 
     @Override
     public void onHitWall(){
-        this.estrategia.onHitWall(this);
+        this.estratega.returnStrategyOnHitWall(this).onHitWall(this);
     }
 
     @Override
-    public void onHitByBullet(){ this.estrategia.onHitByBullet(this); }
+    public void onHitByBullet(){ this.estratega.returnStrategyOnHitByBullet(this).onHitByBullet(this); }
 
-    public Strategy getEstrategia() {
-        return this.estrategia;
-    }
-    public void setEstrategia(Strategy estrategia) {
-        this.estrategia = estrategia;
-//        this.estrategia = estratega.estrategia();
-    }
 
 }

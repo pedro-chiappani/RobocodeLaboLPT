@@ -2,11 +2,26 @@ package packageLPT;
 
 import robocode.JuniorRobot;
 
+import java.awt.*;
+
 public class Defensivo implements Strategist{
 
     private final Strategy corredora = this.new EstrategiaCorredora();
     private final Strategy ganadora = this.new EstrategiaGanadora();
     private int totalRobots = 0;
+
+    private static Defensivo instancia;
+
+    private Defensivo(){
+
+    }
+
+    public static Defensivo getInstancia(){
+        if (instancia == null){
+            instancia = new Defensivo();
+        }
+        return instancia;
+    }
 
     private class EstrategiaCorredora implements Strategy{
         @Override
@@ -81,6 +96,8 @@ public class Defensivo implements Strategist{
     @Override
     public Strategy returnStrategyRun(JuniorRobot robot){
         // Si
+        robot.setColors(Color.blue.getBlue(), Color.yellow.hashCode(), Color.yellow.hashCode());
+
         if (totalRobots == 0)
             totalRobots = robot.others;
         if (robot.energy < 35 && (robot.others > totalRobots/3)) {
