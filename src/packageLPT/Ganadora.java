@@ -2,7 +2,7 @@ package packageLPT;
 
 import java.awt.*;
 
-public class Estratega1 implements Strategy{
+public class Ganadora implements Strategy{
     private int powerFires = 0;
 
 
